@@ -1,0 +1,184 @@
+[debug] [2022-11-22T18:30:15.456Z] ----------------------------------------------------------------------
+[debug] [2022-11-22T18:30:15.460Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dev_Milad\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2022-11-22T18:30:15.461Z] CLI Version:   11.16.1
+[debug] [2022-11-22T18:30:15.461Z] Platform:      win32
+[debug] [2022-11-22T18:30:15.461Z] Node Version:  v16.16.0
+[debug] [2022-11-22T18:30:15.463Z] Time:          Tue Nov 22 2022 22:00:15 GMT+0330 (Iran Standard Time)
+[debug] [2022-11-22T18:30:15.464Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-11-22T18:30:15.561Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-11-22T18:30:15.563Z] > authorizing via signed-in user (fazelianmilad3@gmail.com)
+[debug] [2022-11-22T18:30:15.563Z] [iam] checking project mymoney-e0434 for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2022-11-22T18:30:15.567Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/mymoney-e0434:testIamPermissions [none]
+[debug] [2022-11-22T18:30:15.567Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/mymoney-e0434:testIamPermissions x-goog-quota-user=projects/mymoney-e0434
+[debug] [2022-11-22T18:30:15.567Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mymoney-e0434:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-22T18:30:18.184Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/mymoney-e0434:testIamPermissions 200
+[debug] [2022-11-22T18:30:18.184Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/mymoney-e0434:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2022-11-22T18:30:18.188Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/mymoney-e0434 [none]
+[debug] [2022-11-22T18:30:20.595Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/mymoney-e0434 200
+[debug] [2022-11-22T18:30:20.596Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/mymoney-e0434 {"projectId":"mymoney-e0434","projectNumber":"782589302317","displayName":"myMoney","name":"projects/mymoney-e0434","resources":{"hostingSite":"mymoney-e0434","storageBucket":"mymoney-e0434.appspot.com","locationId":"europe-west"},"state":"ACTIVE","etag":"1_864d2cca-84b6-4cab-80ca-66c4db75d04a"}
+[info] 
+[info] === Deploying to 'mymoney-e0434'...
+[info] 
+[info] i  deploying firestore, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2022-11-22T18:30:20.605Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/mymoney-e0434:test [none]
+[debug] [2022-11-22T18:30:20.605Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/mymoney-e0434:test [omitted]
+[debug] [2022-11-22T18:30:22.886Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/mymoney-e0434:test 200
+[debug] [2022-11-22T18:30:22.886Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/mymoney-e0434:test {}
+[info] +  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2022-11-22T18:30:22.892Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions [none]
+[debug] [2022-11-22T18:30:22.892Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-22T18:30:27.313Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions 200
+[debug] [2022-11-22T18:30:27.313Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions {"name":"projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2022-11-22T18:30:27.318Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases pageSize=10&pageToken=
+[debug] [2022-11-22T18:30:27.320Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/mymoney-e0434/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2022-11-22T18:30:28.652Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases 200
+[debug] [2022-11-22T18:30:28.652Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases {"releases":[{"name":"projects/mymoney-e0434/releases/cloud.firestore","rulesetName":"projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f","createTime":"2022-11-21T11:07:22.213656Z","updateTime":"2022-11-22T18:24:03.627042Z"}]}
+[debug] [2022-11-22T18:30:28.653Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f [none]
+[debug] [2022-11-22T18:30:29.589Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/mymoney-e0434/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2022-11-22T18:30:29.589Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/mymoney-e0434/databases/(default)/collectionGroups/-/indexes {"indexes":[{"name":"projects/mymoney-e0434/databases/(default)/collectionGroups/transactions/indexes/CICAgOjXh4EK","queryScope":"COLLECTION","fields":[{"fieldPath":"uid","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"},{"fieldPath":"__name__","order":"DESCENDING"}],"state":"READY"}]}
+[debug] [2022-11-22T18:30:29.590Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/mymoney-e0434/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false [none]
+[debug] [2022-11-22T18:30:30.759Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f 200
+[debug] [2022-11-22T18:30:30.760Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[debug] [2022-11-22T18:30:32.576Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/mymoney-e0434/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false 200
+[debug] [2022-11-22T18:30:32.576Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/mymoney-e0434/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false {"fields":[{"name":"projects/mymoney-e0434/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[debug] [2022-11-22T18:30:32.577Z] Skipping existing index: {"collectionGroup":"transactions","queryScope":"COLLECTION","fields":[{"fieldPath":"uid","order":"ASCENDING"},{"fieldPath":"createdAt","order":"DESCENDING"}]}
+[info] +  firestore: deployed indexes in firestore.indexes.json successfully 
+[info] i  hosting[mymoney-e0434]: beginning deploy... 
+[info] i  hosting[mymoney-e0434]: found 17 files in build 
+[debug] [2022-11-22T18:30:32.602Z] [hosting] uploading with 200 concurrency
+[debug] [2022-11-22T18:30:32.604Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2022-11-22T18:30:33.298Z] [hosting] hash cache [YnVpbGQ] stored for 17 files
+[debug] [2022-11-22T18:30:33.299Z] [hosting][hash queue][FINAL] {"max":640,"min":17,"avg":57.588235294117645,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":654}
+[debug] [2022-11-22T18:30:33.300Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689:populateFiles [none]
+[debug] [2022-11-22T18:30:33.300Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689:populateFiles {"files":{"/asset-manifest.json":"7f9b0fb945a821b75e9a9c88b875582f1ebd80b7fa11a8b9a0a93aae243fe47c","/index.html":"921287621a9048f4e758e32ea6c2892c0ac3ed333aa06096feb15d42214656ef","/favicon.ico":"eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","/manifest.json":"aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","/robots.txt":"bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","/logo192.png":"3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","/logo512.png":"ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","/static/css/main.4f224ce8.chunk.css":"d499c64d7dd3d0a2d07c55930d919cb31bf03542c1899245cb91e4eed9a582ac","/static/js/2.3c5aa6b7.chunk.js.LICENSE.txt":"dc599aabe26327d822d92ba6c7f68e1c10bd5f10c5b60a2a9abd3ac518badd7a","/static/css/main.4f224ce8.chunk.css.map":"8ce35434eca7554a67fc2d81aa0ffdae9b4f7a719e9fabea4239a69d37725359","/static/js/main.c566c84d.chunk.js.LICENSE.txt":"cf0a56f4e700b95d7a89bf92da4ca97b38a1aec7805250d7064e84865ddf4be5","/static/js/main.c566c84d.chunk.js":"b0583958bd089665010774e80bc6bcc5f73cefe1b63cc91791d20f68673de19e","/static/js/runtime-main.f0ed9832.js":"fad6585c458105ac99b9df628a54787537b0fba6b60cd15d4f14e414bd44583b","/static/js/runtime-main.f0ed9832.js.map":"ddcbe1742b97dfc3aea21159653cfdbda4a7f936cb90b7b0873ff3aa70b4b566","/static/js/main.c566c84d.chunk.js.map":"9c8a1ca1d1af9c8155bc64ac282e0339fbd43ec0eb32281496d12bdab15e5a26","/static/js/2.3c5aa6b7.chunk.js":"91e37fb64e73ada190c2dc59eabcc4dfcc327f035f3b93185f231f4b5ffd3958","/static/js/2.3c5aa6b7.chunk.js.map":"0279571600211d6cf90bc1082d9e1517f83527f1642c5254b4d19494f18ee78f"}}
+[debug] [2022-11-22T18:30:34.951Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689:populateFiles 200
+[debug] [2022-11-22T18:30:34.951Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689:populateFiles {"uploadRequiredHashes":["0279571600211d6cf90bc1082d9e1517f83527f1642c5254b4d19494f18ee78f","eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9","cf0a56f4e700b95d7a89bf92da4ca97b38a1aec7805250d7064e84865ddf4be5","ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331","7f9b0fb945a821b75e9a9c88b875582f1ebd80b7fa11a8b9a0a93aae243fe47c","b0583958bd089665010774e80bc6bcc5f73cefe1b63cc91791d20f68673de19e","91e37fb64e73ada190c2dc59eabcc4dfcc327f035f3b93185f231f4b5ffd3958","ddcbe1742b97dfc3aea21159653cfdbda4a7f936cb90b7b0873ff3aa70b4b566","d499c64d7dd3d0a2d07c55930d919cb31bf03542c1899245cb91e4eed9a582ac","3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b","921287621a9048f4e758e32ea6c2892c0ac3ed333aa06096feb15d42214656ef","8ce35434eca7554a67fc2d81aa0ffdae9b4f7a719e9fabea4239a69d37725359","dc599aabe26327d822d92ba6c7f68e1c10bd5f10c5b60a2a9abd3ac518badd7a","bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49","fad6585c458105ac99b9df628a54787537b0fba6b60cd15d4f14e414bd44583b","aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a","9c8a1ca1d1af9c8155bc64ac282e0339fbd43ec0eb32281496d12bdab15e5a26"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files"}
+[debug] [2022-11-22T18:30:34.955Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/0279571600211d6cf90bc1082d9e1517f83527f1642c5254b4d19494f18ee78f [none]
+[debug] [2022-11-22T18:30:34.955Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/0279571600211d6cf90bc1082d9e1517f83527f1642c5254b4d19494f18ee78f [stream]
+[debug] [2022-11-22T18:30:34.957Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 [none]
+[debug] [2022-11-22T18:30:34.957Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 [stream]
+[debug] [2022-11-22T18:30:34.959Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/cf0a56f4e700b95d7a89bf92da4ca97b38a1aec7805250d7064e84865ddf4be5 [none]
+[debug] [2022-11-22T18:30:34.959Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/cf0a56f4e700b95d7a89bf92da4ca97b38a1aec7805250d7064e84865ddf4be5 [stream]
+[debug] [2022-11-22T18:30:34.960Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 [none]
+[debug] [2022-11-22T18:30:34.960Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 [stream]
+[debug] [2022-11-22T18:30:34.961Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/7f9b0fb945a821b75e9a9c88b875582f1ebd80b7fa11a8b9a0a93aae243fe47c [none]
+[debug] [2022-11-22T18:30:34.962Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/7f9b0fb945a821b75e9a9c88b875582f1ebd80b7fa11a8b9a0a93aae243fe47c [stream]
+[debug] [2022-11-22T18:30:34.964Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/b0583958bd089665010774e80bc6bcc5f73cefe1b63cc91791d20f68673de19e [none]
+[debug] [2022-11-22T18:30:34.964Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/b0583958bd089665010774e80bc6bcc5f73cefe1b63cc91791d20f68673de19e [stream]
+[debug] [2022-11-22T18:30:34.966Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/91e37fb64e73ada190c2dc59eabcc4dfcc327f035f3b93185f231f4b5ffd3958 [none]
+[debug] [2022-11-22T18:30:34.967Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/91e37fb64e73ada190c2dc59eabcc4dfcc327f035f3b93185f231f4b5ffd3958 [stream]
+[debug] [2022-11-22T18:30:34.968Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ddcbe1742b97dfc3aea21159653cfdbda4a7f936cb90b7b0873ff3aa70b4b566 [none]
+[debug] [2022-11-22T18:30:34.968Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ddcbe1742b97dfc3aea21159653cfdbda4a7f936cb90b7b0873ff3aa70b4b566 [stream]
+[debug] [2022-11-22T18:30:34.969Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/d499c64d7dd3d0a2d07c55930d919cb31bf03542c1899245cb91e4eed9a582ac [none]
+[debug] [2022-11-22T18:30:34.969Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/d499c64d7dd3d0a2d07c55930d919cb31bf03542c1899245cb91e4eed9a582ac [stream]
+[debug] [2022-11-22T18:30:34.970Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b [none]
+[debug] [2022-11-22T18:30:34.970Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b [stream]
+[debug] [2022-11-22T18:30:34.972Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/921287621a9048f4e758e32ea6c2892c0ac3ed333aa06096feb15d42214656ef [none]
+[debug] [2022-11-22T18:30:34.972Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/921287621a9048f4e758e32ea6c2892c0ac3ed333aa06096feb15d42214656ef [stream]
+[debug] [2022-11-22T18:30:34.973Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/8ce35434eca7554a67fc2d81aa0ffdae9b4f7a719e9fabea4239a69d37725359 [none]
+[debug] [2022-11-22T18:30:34.973Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/8ce35434eca7554a67fc2d81aa0ffdae9b4f7a719e9fabea4239a69d37725359 [stream]
+[debug] [2022-11-22T18:30:34.974Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/dc599aabe26327d822d92ba6c7f68e1c10bd5f10c5b60a2a9abd3ac518badd7a [none]
+[debug] [2022-11-22T18:30:34.974Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/dc599aabe26327d822d92ba6c7f68e1c10bd5f10c5b60a2a9abd3ac518badd7a [stream]
+[debug] [2022-11-22T18:30:34.974Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [none]
+[debug] [2022-11-22T18:30:34.975Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [stream]
+[debug] [2022-11-22T18:30:34.975Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/fad6585c458105ac99b9df628a54787537b0fba6b60cd15d4f14e414bd44583b [none]
+[debug] [2022-11-22T18:30:34.975Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/fad6585c458105ac99b9df628a54787537b0fba6b60cd15d4f14e414bd44583b [stream]
+[debug] [2022-11-22T18:30:34.979Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a [none]
+[debug] [2022-11-22T18:30:34.979Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a [stream]
+[debug] [2022-11-22T18:30:34.981Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/9c8a1ca1d1af9c8155bc64ac282e0339fbd43ec0eb32281496d12bdab15e5a26 [none]
+[debug] [2022-11-22T18:30:34.982Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/9c8a1ca1d1af9c8155bc64ac282e0339fbd43ec0eb32281496d12bdab15e5a26 [stream]
+[debug] [2022-11-22T18:30:34.982Z] [hosting][populate queue][FINAL] {"max":1662,"min":1662,"avg":1662,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1689}
+[debug] [2022-11-22T18:30:34.983Z] [hosting] uploads queued: 17
+[debug] [2022-11-22T18:30:40.307Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 200
+[debug] [2022-11-22T18:30:40.308Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/eae62e993eb980ec8a25058c39d5a51feab118bd2100c4deebb2a9c158ec11f9 [stream]
+[debug] [2022-11-22T18:30:40.777Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/b0583958bd089665010774e80bc6bcc5f73cefe1b63cc91791d20f68673de19e 200
+[debug] [2022-11-22T18:30:40.777Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/b0583958bd089665010774e80bc6bcc5f73cefe1b63cc91791d20f68673de19e [stream]
+[debug] [2022-11-22T18:30:40.926Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 200
+[debug] [2022-11-22T18:30:40.926Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ee7e2f3fdb8209c4b6fd7bef6ba50d1b9dba30a25bb5c3126df057e1cb6f5331 [stream]
+[debug] [2022-11-22T18:30:40.931Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/d499c64d7dd3d0a2d07c55930d919cb31bf03542c1899245cb91e4eed9a582ac 200
+[debug] [2022-11-22T18:30:40.932Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/d499c64d7dd3d0a2d07c55930d919cb31bf03542c1899245cb91e4eed9a582ac [stream]
+[debug] [2022-11-22T18:30:41.265Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/8ce35434eca7554a67fc2d81aa0ffdae9b4f7a719e9fabea4239a69d37725359 200
+[debug] [2022-11-22T18:30:41.265Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/8ce35434eca7554a67fc2d81aa0ffdae9b4f7a719e9fabea4239a69d37725359 [stream]
+[debug] [2022-11-22T18:30:42.356Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/cf0a56f4e700b95d7a89bf92da4ca97b38a1aec7805250d7064e84865ddf4be5 200
+[debug] [2022-11-22T18:30:42.357Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/cf0a56f4e700b95d7a89bf92da4ca97b38a1aec7805250d7064e84865ddf4be5 [stream]
+[debug] [2022-11-22T18:30:44.594Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/dc599aabe26327d822d92ba6c7f68e1c10bd5f10c5b60a2a9abd3ac518badd7a 200
+[debug] [2022-11-22T18:30:44.595Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/dc599aabe26327d822d92ba6c7f68e1c10bd5f10c5b60a2a9abd3ac518badd7a [stream]
+[debug] [2022-11-22T18:30:45.310Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/7f9b0fb945a821b75e9a9c88b875582f1ebd80b7fa11a8b9a0a93aae243fe47c 200
+[debug] [2022-11-22T18:30:45.311Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/7f9b0fb945a821b75e9a9c88b875582f1ebd80b7fa11a8b9a0a93aae243fe47c [stream]
+[debug] [2022-11-22T18:30:46.172Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/921287621a9048f4e758e32ea6c2892c0ac3ed333aa06096feb15d42214656ef 200
+[debug] [2022-11-22T18:30:46.172Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/921287621a9048f4e758e32ea6c2892c0ac3ed333aa06096feb15d42214656ef [stream]
+[debug] [2022-11-22T18:30:52.527Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a 200
+[debug] [2022-11-22T18:30:52.528Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/aff3449bdc238776f5d6d967f19ec491b36aed5fb7f23ccff6500736fd58494a [stream]
+[debug] [2022-11-22T18:30:52.725Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/fad6585c458105ac99b9df628a54787537b0fba6b60cd15d4f14e414bd44583b 200
+[debug] [2022-11-22T18:30:52.725Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/fad6585c458105ac99b9df628a54787537b0fba6b60cd15d4f14e414bd44583b [stream]
+[debug] [2022-11-22T18:30:52.726Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 200
+[debug] [2022-11-22T18:30:52.726Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/bfe106a3fb878dc83461c86818bf74fc1bdc7f28538ba613cd3e775516ce8b49 [stream]
+[debug] [2022-11-22T18:30:54.334Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ddcbe1742b97dfc3aea21159653cfdbda4a7f936cb90b7b0873ff3aa70b4b566 200
+[debug] [2022-11-22T18:30:54.334Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/ddcbe1742b97dfc3aea21159653cfdbda4a7f936cb90b7b0873ff3aa70b4b566 [stream]
+[debug] [2022-11-22T18:30:54.335Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/9c8a1ca1d1af9c8155bc64ac282e0339fbd43ec0eb32281496d12bdab15e5a26 200
+[debug] [2022-11-22T18:30:54.335Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/9c8a1ca1d1af9c8155bc64ac282e0339fbd43ec0eb32281496d12bdab15e5a26 [stream]
+[debug] [2022-11-22T18:31:00.960Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b 200
+[debug] [2022-11-22T18:31:00.960Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/3ee59515172ee198f3be375979df15ac5345183e656720a381b8872b2a39dc8b [stream]
+[debug] [2022-11-22T18:31:00.961Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/91e37fb64e73ada190c2dc59eabcc4dfcc327f035f3b93185f231f4b5ffd3958 200
+[debug] [2022-11-22T18:31:00.961Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/91e37fb64e73ada190c2dc59eabcc4dfcc327f035f3b93185f231f4b5ffd3958 [stream]
+[debug] [2022-11-22T18:31:35.083Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/0279571600211d6cf90bc1082d9e1517f83527f1642c5254b4d19494f18ee78f 200
+[debug] [2022-11-22T18:31:35.083Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/mymoney-e0434/versions/620c6e016c7cf689/files/0279571600211d6cf90bc1082d9e1517f83527f1642c5254b4d19494f18ee78f [stream]
+[debug] [2022-11-22T18:31:35.084Z] [hosting][upload queue][FINAL] {"max":60133,"min":5356,"avg":16005.70588235294,"active":0,"complete":17,"success":17,"errored":0,"retried":0,"total":17,"elapsed":60133}
+[info] +  hosting[mymoney-e0434]: file upload complete 
+[debug] [2022-11-22T18:31:35.087Z] [hosting] deploy completed after 62505ms
+[debug] [2022-11-22T18:31:35.091Z] [rules] releasing cloud.firestore with ruleset projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f
+[debug] [2022-11-22T18:31:35.092Z] >>> [apiv2][query] PATCH https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases/cloud.firestore [none]
+[debug] [2022-11-22T18:31:35.092Z] >>> [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases/cloud.firestore {"release":{"name":"projects/mymoney-e0434/releases/cloud.firestore","rulesetName":"projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f"}}
+[debug] [2022-11-22T18:31:37.840Z] <<< [apiv2][status] PATCH https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases/cloud.firestore 200
+[debug] [2022-11-22T18:31:37.840Z] <<< [apiv2][body] PATCH https://firebaserules.googleapis.com/v1/projects/mymoney-e0434/releases/cloud.firestore {"name":"projects/mymoney-e0434/releases/cloud.firestore","rulesetName":"projects/mymoney-e0434/rulesets/58bf8f3f-0889-4a1d-9091-d0f73d571c9f","createTime":"2022-11-21T11:07:22.213656Z","updateTime":"2022-11-22T18:31:37.193966Z"}
+[debug] [2022-11-22T18:31:37.840Z] [rules] updated release projects/mymoney-e0434/releases/cloud.firestore
+[info] +  firestore: released rules firestore.rules to cloud.firestore 
+[debug] [2022-11-22T18:31:37.842Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "mymoney-e0434"
+    },
+    "version": "projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689"
+  }
+]
+[info] i  hosting[mymoney-e0434]: finalizing version... 
+[debug] [2022-11-22T18:31:37.847Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions/620c6e016c7cf689 updateMask=status%2Cconfig
+[debug] [2022-11-22T18:31:37.847Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions/620c6e016c7cf689 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2022-11-22T18:31:42.388Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions/620c6e016c7cf689 200
+[debug] [2022-11-22T18:31:42.388Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/versions/620c6e016c7cf689 {"name":"projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-22T18:30:24.979533Z","createUser":{"email":"fazelianmilad3@gmail.com"},"finalizeTime":"2022-11-22T18:31:41.271657Z","finalizeUser":{"email":"fazelianmilad3@gmail.com"}}
+[debug] [2022-11-22T18:31:42.388Z] [hosting] finalized version for mymoney-e0434:[object Object]
+[info] +  hosting[mymoney-e0434]: version finalized 
+[info] i  hosting[mymoney-e0434]: releasing new version... 
+[debug] [2022-11-22T18:31:42.390Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/channels/live/releases versionName=projects%2F782589302317%2Fsites%2Fmymoney-e0434%2Fversions%2F620c6e016c7cf689
+[debug] [2022-11-22T18:31:42.390Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/channels/live/releases {}
+[debug] [2022-11-22T18:31:44.447Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/channels/live/releases 200
+[debug] [2022-11-22T18:31:44.447Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/mymoney-e0434/channels/live/releases {"name":"projects/782589302317/sites/mymoney-e0434/channels/live/releases/1669141902952541","version":{"name":"projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-22T18:30:24.979533Z","createUser":{"email":"fazelianmilad3@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2EtZbuUq9HQL5qk8SHMT-Het-HY7No7yriLk21Yw"},"finalizeTime":"2022-11-22T18:31:41.271657Z","finalizeUser":{"email":"fazelianmilad3@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2EtZbuUq9HQL5qk8SHMT-Het-HY7No7yriLk21Yw"}},"type":"DEPLOY","releaseTime":"2022-11-22T18:31:42.952541417Z","releaseUser":{"email":"fazelianmilad3@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2EtZbuUq9HQL5qk8SHMT-Het-HY7No7yriLk21Yw"}}
+[debug] [2022-11-22T18:31:44.447Z] [hosting] release: {"name":"projects/782589302317/sites/mymoney-e0434/channels/live/releases/1669141902952541","version":{"name":"projects/782589302317/sites/mymoney-e0434/versions/620c6e016c7cf689","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2022-11-22T18:30:24.979533Z","createUser":{"email":"fazelianmilad3@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2EtZbuUq9HQL5qk8SHMT-Het-HY7No7yriLk21Yw"},"finalizeTime":"2022-11-22T18:31:41.271657Z","finalizeUser":{"email":"fazelianmilad3@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2EtZbuUq9HQL5qk8SHMT-Het-HY7No7yriLk21Yw"}},"type":"DEPLOY","releaseTime":"2022-11-22T18:31:42.952541417Z","releaseUser":{"email":"fazelianmilad3@gmail.com","imageUrl":"https://lh3.googleusercontent.com/a/ALm5wu2EtZbuUq9HQL5qk8SHMT-Het-HY7No7yriLk21Yw"}}
+[info] +  hosting[mymoney-e0434]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/mymoney-e0434/overview
+[info] Hosting URL: https://mymoney-e0434.web.app
+[debug] [2022-11-22T18:31:59.713Z] Error: Timed out.
+    at Timeout.<anonymous> (C:\Users\Dev_Milad\AppData\Roaming\npm\node_modules\firebase-tools\lib\utils.js:253:49)
+    at listOnTimeout (node:internal/timers:559:17)
+    at processTimers (node:internal/timers:502:7)
+[error] 
+[error] Error: An unexpected error has occurred.
